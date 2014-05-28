@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('*', function(request, response) {
-  response.redirect(process.env.NEW_BASE_URL + request.url)
+  response.redirect(process.env.NEW_BASE_URL)
 });
 
 var port = process.env.PORT || 5000;
